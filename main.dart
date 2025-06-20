@@ -16,9 +16,18 @@ int numberOfVowels(String text) {
   return count;
 }
 
+int largerOf(int a, int b) {
+  if (a >= b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
 void main() {
   for (int i = 5; i < 8; i++) {
     print(trippleSum(1, i, i - 1));
+    print(largerOf(i, 6));
   }
 
   List<String> texts = ['Rüdiger', 'Nehberg', 'Seine Schwester'];
