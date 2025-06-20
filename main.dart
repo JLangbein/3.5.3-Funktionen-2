@@ -48,6 +48,21 @@ double average(List<int> list) {
   return average / list.length;
 }
 
+int countInstancesOf(String text, String operator) {
+  if (operator.length > 1) {
+    print('Operator can only be one letter!');
+    return 0;
+  } else {
+    int count = 0;
+    for (int i = 0; i < text.length; i++) {
+      if (text[i] == operator) {
+        count++;
+      }
+    }
+    return count;
+  }
+}
+
 void main() {
   for (int i = 5; i < 8; i++) {
     print(trippleSum(1, i, i - 1));
@@ -61,5 +76,6 @@ void main() {
   for (String text in texts) {
     print('Anzahl Zeichen in $text: ${textLength(text)}');
     print('Anzahl Vokale in $text: ${numberOfVowels(text)}');
+    print('Anzahl R in $text: ${countInstancesOf(text, 'R')}');
   }
 }
