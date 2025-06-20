@@ -24,10 +24,19 @@ int largerOf(int a, int b) {
   }
 }
 
+bool isEven(int a) {
+  if (a % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void main() {
   for (int i = 5; i < 8; i++) {
     print(trippleSum(1, i, i - 1));
     print(largerOf(i, 6));
+    print('$i ist gerade: ${isEven(i)}');
   }
 
   List<String> texts = ['Rüdiger', 'Nehberg', 'Seine Schwester'];
