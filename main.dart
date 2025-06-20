@@ -40,12 +40,21 @@ int sumList(List<int> list) {
   return sum;
 }
 
+double average(List<int> list) {
+  double average = 0;
+  for (int i in list) {
+    average += i;
+  }
+  return average / list.length;
+}
+
 void main() {
   for (int i = 5; i < 8; i++) {
     print(trippleSum(1, i, i - 1));
     print(largerOf(i, 6));
     print('$i ist gerade: ${isEven(i)}');
     print(sumList([i - 1, i, i + 1]));
+    print(average([i - 1, i, i + 1]));
   }
 
   List<String> texts = ['Rüdiger', 'Nehberg', 'Seine Schwester'];
